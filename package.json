@@ -58,15 +58,12 @@
     "build:fix": "esno scripts/postbuild.ts",
     "lint": "eslint \"{src,test}/**/*.ts\"",
     "lint:fix": "npm run lint -- --fix",
-    "play": "npm -C playground run dev",
-    "prepublishOnly": "npm run build",
+    "play": "npm -C playground run build",
     "release": "bumpp --commit --push --tag && pnpm publish",
-    "start": "esno src/index.ts",
-    "test": "jest",
-    "test:update": "jest -u"
+    "test": "jest"
   },
   "dependencies": {
-    "unplugin": "^0.2.7"
+    "unplugin": "^0.4.0"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.7.0",
